@@ -13,7 +13,10 @@ CREATE TABLE "DeptEmployee" (
 
 CREATE TABLE "DeptManager" (
     "dept_no" varchar(30)   NOT NULL,
-    "emp_no" integer   NOT NULL
+    "emp_no" integer   NOT NULL,
+    CONSTRAINT "pk_DeptManager" PRIMARY KEY (
+        "dept_no","emp_no"
+     )
 );
 
 CREATE TABLE "Titles" (
