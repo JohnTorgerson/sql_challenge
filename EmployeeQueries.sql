@@ -15,12 +15,37 @@ and e.hire_date < '1987-01-01';
 
 -- 3. List Managers by [Department Number, Department Name, Employee Id, Last Name, & First Name].
 -- Tables: Departments; DeptManager; Employees
--- Join using Subqueries
--- Here Some Sample Code from 2-06
-select dm.dept_no, d.dept_name, dm.emp_no, e.last_name, e.first_name
-from "Employees" as e, "Departments" as d
-inner join "DeptManager" as dm;
+select d.dept_no, d.dept_name, e.emp_no, e.last_name, d.dept_name
+from "Employees" as e
+left join "DeptManager" as dm
+on e.emp_no = dm.emp_no
+left join "Departments" as d
+on d.dept_no = dm.dept_no;
 
+select * from "DeptEmployee";
+-- 4. List Employee Departments by [Employee ID, Last Name, First Name, Department Name].
+-- Tables: Departments; DeptEmployee; Employees
+select e.emp_no, e.first_name, e.last_name, d.dept_name
+from "Employees" as e
+left join "DeptEmployee" as de
+on e.emp_no = de.emp_no
+left join "Departments" as d
+on d.dept_no = de.dept_no;
+-- 5. List [[First Name, Last Name] where 1st is Hercules, & last begins with "B"].
+-- Tables: Employee .where
+-- < where city like 'Q%' > for cities that start with "Q"
+
+
+-- 6. List Employees in Sales by [Employee ID, Last Name, First Name, & Department Name].
+-- Tables: Departments; DeptEmployee; Employees
+
+
+-- 7. List Employees in Sales and Development by [Employee ID, Last Name, First Name, & Department Name].
+-- Tables: Departments; DebtEmployee; Employees
+
+
+-- 8. list last name frequency by most common [Last name, counts], descending.
+-- Tables: Employees .sort func.count()
 
 -- Here is 1st Query
 select title, film_id
@@ -51,29 +76,6 @@ where film_id in (select film_id
 	from film
 	where title = 'EARLY HOME'
 );
-
-
--- 4. List Employee Departments by [Employee ID, Last Name, First Name, Department Name].
--- Tables: Departments; DeptEmployee; Employees
-
-
--- 5. List [[First Name, Last Name] where 1st is Hercules, & last begins with "B"].
--- Tables: Employee .where
--- < where city like 'Q%' > for cities that start with "Q"
-
-
--- 6. List Employees in Sales by [Employee ID, Last Name, First Name, & Department Name].
--- Tables: Departments; DeptEmployee; Employees
-
-
--- 7. List Employees in Sales and Development by [Employee ID, Last Name, First Name, & Department Name].
--- Tables: Departments; DebtEmployee; Employees
-
-
--- list last name frequency by most common [Last name, counts], descending.
--- Tables: Employees .sort func.count()
-
-
 -- BONUS import to pandas for modeling
 -- ***code***
 -- from sqlalchemy import create_engine
