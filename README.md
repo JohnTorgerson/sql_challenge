@@ -5,6 +5,8 @@ Authors:
 ---  
 Database using 6 tables to track deparments, department managers, employees, different deparments employees work for, salaries, hire dates and genders
 
+PostgreSQL, SQAlchemy, Pandas, Matplotlib were all used for this project
+
 Schemata and Queries were run using PostgreSQL
 Schemata was designed and exported from Quick DBD
 Quick DBD website: https://app.quickdatabasediagrams.com/
@@ -14,8 +16,12 @@ Quick DBD website: https://app.quickdatabasediagrams.com/
 ### Guide to Repo Contents:
 * `EmployeeQueries.sql` is the sql code used to make queries from the database
     -- you'll notice Question 6 has two answers, this was an effort to deliver results along two different paths
-* `EmployeeSchemata.sql` is the original schemata directly exported from Quick DBD 
+* `EmployeeSchemata.sql` is the original schemata directly exported from Quick DBD
+* `EmployeeSqlalchemy.ipynb` is jupyter notebook file that uses pandas to plot visualizations
 * `EmployeeSchemataERD.jpg` is a visualization of the ERD created on Quick DBD
+* `HistogramOfSalaries.png` is a histogram of all employees and how much they make broken into 25 bins
+* `AverageSalariesBar.png` is a bar chart showing the average salary by job title
+
 * In folder `data` are 6 tables
     1. `departments.csv` is a table of the Departments
     2. `data` is a junction table between Departments and Employees
