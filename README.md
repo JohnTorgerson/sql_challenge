@@ -4,7 +4,7 @@
 ##### Authors:
 * John Torgerson (JohnTorgerson)
 ---
-##### Tools
+##### Tools & Supplies:
 * Database using 6 tables to track deparments, department managers, employees, employees varied departments, salaries, hire dates, and genders
 
 * PostgreSQL, SQAlchemy, Pandas, Matplotlib were all used for this project
@@ -24,8 +24,7 @@
 * `EmployeeSchemataERD.jpg` is a visualization of the ERD created on Quick DBD
 * `HistogramOfSalaries.png` is a histogram of all employees and how much they make broken into 25 bins
 * `AverageSalariesBar.png` is a bar chart showing the average salary by job title
----
-* In folder `data` are the following 6 tables
+* In folder, `data` are the following 6 tables:
     1. `departments.csv` is a table of the Departments
     2. `dept_emp.csv` is a junction table between Departments and Employees
     3. `dept_manager.csv` is a junction table specific to Management
@@ -41,7 +40,7 @@
 * Engineer, Asst Engineer, Senior Engineer have similar AVG Salaries, with Senior Engineers making the least of the group. Meanwhile Senior Staff as well as general Staff, both AVG nearly 12,000 more. Also, from our previous examples, there are an awful lot of women named Hercules B____, which seems improbable.
 * Either something is wrong, or this company data is fictional.
 
-
+---
 
 ### Credits and Special Thanks
 
