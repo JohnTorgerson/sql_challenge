@@ -35,10 +35,9 @@ left join "Departments" as d
 on d.dept_no = de.dept_no;
 
 
--- 5. List [[First Name, Last Name] where 1st is Hercules, & last begins with "B"].
--- Tables: Employee .where
--- < where city like 'Q%' > for cities that start with "Q"
-select e.first_name, e.last_name, e.hire_date
+-- 5. List First Name, Last Name, genderwhere 1st is Hercules, & last begins with "B".
+-- Tables: Employee .where 'B%'
+select e.first_name, e.last_name, e.sex
 from "Employees" as e
 where e.first_name = 'Hercules'
 and e.last_name like 'B%';
@@ -66,6 +65,7 @@ where emp_title_id in
 		(select dept_no
 		from "Departments" as d
 		where dept_name = 'Sales'
+		
 	)
 );
 
