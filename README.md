@@ -1,16 +1,17 @@
 # SQL Employee Database
 ### Database of Managers and Staff across 9 Departments
 
-Authors:
+##### Authors:
 * John Torgerson (JohnTorgerson)
----  
-Database using 6 tables to track deparments, department managers, employees, different deparments employees work for, salaries, hire dates and genders
+---
+##### Tools
+* Database using 6 tables to track deparments, department managers, employees, employees varied departments, salaries, hire dates, and genders
 
-PostgreSQL, SQAlchemy, Pandas, Matplotlib were all used for this project
+* PostgreSQL, SQAlchemy, Pandas, Matplotlib were all used for this project
 
-Schemata and Queries were run using PostgreSQL
-Schemata was designed and exported from Quick DBD
-Quick DBD website: https://app.quickdatabasediagrams.com/
+* Schemata and Queries were run using PostgreSQL
+* Schemata was designed and exported from Quick DBD
+* Quick DBD website: https://app.quickdatabasediagrams.com/
 
 ---
 
@@ -44,5 +45,5 @@ Quick DBD website: https://app.quickdatabasediagrams.com/
 
 ### Credits and Special Thanks
 
-* Tom Lenzmeier for sharing a name concatenation; 
+* Tom Lenzmeier for sharing a name concatenation technique
 * Thanks to Sanoo Singh for inspiring me to practice subquery method
